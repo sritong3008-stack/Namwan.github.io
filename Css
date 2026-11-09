@@ -1,0 +1,206 @@
+
+/* =========================
+   ตั้งค่าพื้นฐานเว็บไซต์
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #e6f7ff);
+    color: #444;
+    line-height: 1.8;
+}
+
+/* =========================
+   ส่วนหัวเว็บไซต์
+========================= */
+header {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+    border-radius: 0 0 50px 50px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+header h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* =========================
+   ส่วนเนื้อหาเว็บไซต์
+========================= */
+section {
+    background: white;
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.5s;
+}
+
+section h2 {
+    color: #d66ba0;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 17px;
+    text-align: center;
+}
+
+/* =========================
+   กล่องผลงาน
+========================= */
+.project {
+    background: #fff0f6;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 18px;
+    border-left: 6px solid #e88bbd;
+    transition: 0.4s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(214,107,160,0.2);
+    background: #ffe4ef;
+}
+
+.project h3 {
+    color: #bd5b91;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   ส่วนทักษะ
+========================= */
+#skills ul {
+    padding-left: 40px;
+    font-size: 17px;
+}
+
+#skills li {
+    margin: 12px 0;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    color: #d66ba0;
+    transform: translateX(8px);
+}
+
+/* =========================
+   เป้าหมายในอนาคต
+========================= */
+#goals {
+    background: linear-gradient(135deg, #ffffff, #fff0f6);
+}
+
+/* =========================
+   ส่วนท้ายเว็บไซต์
+========================= */
+footer {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+/* =========================
+   ปุ่มกลับด้านบน
+========================= */
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d66ba0;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+#topButton:hover {
+    background: #a18cd1;
+    transform: scale(1.1);
+}
+
+/* =========================
+   เอฟเฟกต์เคลื่อนไหว
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: fadeIn 1.2s ease;
+}
+
+/* =========================
+   รองรับโทรศัพท์มือถือ
+========================= */
+@media (max-width: 768px) {
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header h2 {
+        font-size: 21px;
+    }
+
+    section {
+        width: 92%;
+        padding: 22px;
+        margin: 25px auto;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+}
