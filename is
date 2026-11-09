@@ -1,0 +1,51 @@
+
+// 1. แสดงปีปัจจุบันอัตโนมัติ
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// 2. แสดงข้อความต้อนรับ
+window.addEventListener("load", function () {
+    console.log("ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของพวกเรา!");
+
+    alert("ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของอนงค์เนตรและจิราพัชรค่ะ");
+});
+
+// 3. เอฟเฟกต์แสดงเนื้อหาเมื่อเลื่อนหน้าจอ
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(
+    function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    { threshold: 0.15 }
+);
+
+sections.forEach(function (section) {
+    observer.observe(section);
+});
+
+// 4. เอฟเฟกต์กล่องผลงาน
+const projects = document.querySelectorAll(".project");
+
+projects.forEach(function (project, index) {
+    project.style.transitionDelay = (index * 0.2) + "s";
+});
+
+// 5. ปุ่มกลับขึ้นด้านบน
+const topButton = document.createElement("button");
+
+topButton.textContent = "⬆ กลับด้านบน";
+topButton.id = "topButton";
+
+document.body.appendChild(topButton);
+
+topButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
