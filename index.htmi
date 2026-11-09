@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | จุฬาลักษณ์ จำนงจิต</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --cream: #fffaf2;
+  --brown: #60432f;
+  --orange: #c9824b;
+  --light: #f3e5d3;
+  --text: #44362e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+nav {
+  background: rgba(255,250,242,.96);
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px #60432f15;
+}
+
+.logo {
+  font-family: 'Kanit', sans-serif;
+  color: var(--brown);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+nav a {
+  color: var(--brown);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+.hero {
+  min-height: 600px;
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+  background: linear-gradient(135deg,#fffaf2,#f1dfc9);
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 280px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center top;
+  border: 9px solid white;
+  border-radius: 150px 150px 30px 30px;
+  box-shadow: 0 15px 35px #60432f25;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text .small {
+  color: var(--orange);
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 43px;
+  color: var(--brown);
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.hero-text p {
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  background: var(--brown);
+  color: white;
+  padding: 11px 27px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+section {
+  padding: 75px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-family: 'Kanit', sans-serif;
+  color: var(--brown);
+  font-size: 30px;
+}
+
+.section-title p {
+  color: var(--orange);
+}
+
+.about {
+  background: white;
+}
+
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  background: var(--cream);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #60432f10;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.info div {
+  padding: 12px;
+  border-bottom: 1px solid #ead9c5;
+}
+
+.info b {
+  color: var(--brown);
+}
+
+.education {
+  background: var(--cream);
+}
+
+.edu-card {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-left: 5px solid var(--orange);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px #60432f10;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 20px #60432f12;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card .emoji {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: var(--brown);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.award {
+  background: white;
+}
+
+.award-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.award-item {
+  background: var(--cream);
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border-left: 5px solid var(--orange);
+}
+
+.award-item h3 {
+  color: var(--brown);
+  font-size: 17px;
+}
+
+.award-item p {
+  font-size: 14px;
+}
+
+.goal {
+  text-align: center;
+  background: linear-gradient(135deg,#f1dfc9,#fffaf2);
+}
+
+.goal-box {
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+}
+
+footer {
+  background: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+@media(max-width:750px) {
+  nav {
+    padding: 12px 5%;
+    flex-wrap: wrap;
+  }
+
+  nav div:last-child {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 50px 7%;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero img {
+    width: 220px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">MY PORTFOLIO</div>
+  <div>
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">ประวัติ</a>
+    <a href="#education">การศึกษา</a>
+    <a href="#activity">กิจกรรม</a>
+    <a href="#award">ผลงาน</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <img src="images/images/profile.jpg" alt="รูปถ่ายจิราพัชร">
+  <div class="hero-text">
+    <p class="small">WELCOME TO MY PORTFOLIO</p>
+    <h1>จิราพัชร<br>คงประมัญ</h1>
+    <p>
+      แฟ้มสะสมผลงานเพื่อประกอบการพิจารณาเข้าศึกษาต่อ
+ 
